@@ -38,14 +38,7 @@ public class NormalAttackAnim : BaseAttackAnim
         Vector3 basePos = attackObjRect.anchoredPosition3D;
         attackSequece.Append(attackObjRect.DOAnchorPos3DZ(-130, 0.3f));
         attackSequece.Append(attackObjRect.DOAnchorPos3D(new Vector3(targetObjRect.anchoredPosition.x, targetObjRect.anchoredPosition.y), 0.2f).SetEase(Ease.InBack) .OnComplete(()=> {
-            targetObjRect.transform.DOShakeRotation(0.2f,new Vector3(30,30,15),10);
-            targetObjRect.transform.DOShakePosition(0.15f, new Vector3(15, 15, 0), 30);
-            //   targetObjRect.transform.DOShakeScale(0.15f, new Vector3(-0.5f,-0.5f,-0.5f), 10);
-            targetObjRect.transform.DOPunchScale(new Vector3(-0.5f, -0.5f, -0.5f), 0.3f,10,-0.5f);
-
-        //    targetObjRect.GetComponent<Image>().DOColor(new Color32(255, 50, 50, 255), 0.3f).From();
-
-
+            SetTargetHit(targetObjRect.gameObject);
 
             GameObject impactGo = Instantiate((GameObject)Resources.Load("VFX/VFX_NormalAttackImpact"));
             impactGo.transform.position = new Vector3(targetObjRect.transform.position.x, targetObjRect.transform.position.y, targetObjRect.transform.position.z-10);
