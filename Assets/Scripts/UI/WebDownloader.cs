@@ -4,16 +4,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class WebDownloader : MonoBehaviour
+public class WebDownloader : MonoSingleton<WebDownloader>
 {
-    public static WebDownloader Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
     public void DownloadImage(string imageUrl, string fileName, Action<Texture2D> onSuccess,
         Action<Exception> onFailure = null, bool reDownload = false)
     {

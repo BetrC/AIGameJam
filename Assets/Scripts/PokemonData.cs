@@ -1,12 +1,15 @@
+using System;
+using UnityEngine.Serialization;
 
+[Serializable]
 public class PokemonData
 {
-    public int id;
-    public string name;
-    public string race;
-    public int level;
-    public int hP;
-    public int atk;
-    public int defence;
-    public string desc;
+    [FormerlySerializedAs("id")] public int ID;
+    [FormerlySerializedAs("name")] public string Monster;
+    [FormerlySerializedAs("race")] public string Rarity;
+    [FormerlySerializedAs("level")] public int Level;
+    [FormerlySerializedAs("hP")] public int HP;
+    [FormerlySerializedAs("atk")] public int Attack;
+    [FormerlySerializedAs("defence")] public int Defense;
+    [FormerlySerializedAs("desc")] public string Description;
 }
