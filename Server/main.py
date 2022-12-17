@@ -2,8 +2,10 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
 from urllib import parse
 from CommandHandler import CommandHandler
+from PokemonManager import *
+from BattleManager import *
 
-hostName = "192.168.1.10"
+hostName = "localhost"
 serverPort = 8080
 commandHandler = CommandHandler()
 
@@ -21,6 +23,10 @@ class ThreadingSimpleServer(ThreadingMixIn, HTTPServer):
     pass
 
 if __name__ == "__main__":
+    # 读配置
+    pokemonManager.LoadData()
+    battleManager.start_timer()
+
     server = ThreadingSimpleServer((hostName, serverPort), Handler)
     print("Server started http://%s:%s" % (hostName, serverPort))
     server.serve_forever()

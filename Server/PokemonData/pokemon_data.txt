@@ -1,0 +1,81 @@
+10
+ID:1
+Monster - Blackhole Monster
+Rarity - Epic
+Level - 10
+HP - 160
+Attack - 145
+Defense - 42
+Description - A cosmic entity that devours planets for breakfast.
+ID:2
+Monster - Feral Slime
+Rarity - Uncommon
+Level - 10
+HP - 180
+Attack - 112
+Defense - 66
+Description - The most ferocious creature alive. If you see this in the wild, run as far and as fast as you can.
+ID:3
+Monster - Drowzee  
+Rarity - Very Rare  
+Level - 9  
+HP - 222  
+Attack - 117  
+Defense - 45
+Description - A creepy looking animal that has a strange looking body. It is said that it can put other creatures to sleep with its gaze. A very powerful creature that should not be underestimated.
+ID:4
+Monster - Gengar  
+Rarity - Mythic  
+Level - 13  
+HP - 283  
+Attack - 225  
+Defense - 72  
+Description - A menacing ghost that can haunt its victims. It is said to feed on their fears and weaknesses. A very dangerous creature that should not be underestimated.
+ID:5
+Monster - Ninetales (Ice)  
+Rarity - Very Rare   
+Level - 9  
+HP - 230  
+Attack - 95  
+Defense - 48  
+Description - A beautiful animal with a mystical aura surrounding it. It is said to be very powerful, and can freeze its victims with its breath. A rare and fascinating creature that should be treasured.
+ID:6
+Monster - Charizard  
+Rarity - Mythic  
+Level - 13  
+HP - 315  
+Attack - 175  
+Defense - 65  
+Description - A powerful dragon that can breathe fire. It is said that its breath is so hot that it can melt mountains. A dangerous and terrifying creature that should be feared and respected.
+ID:7
+Monster - Palkia
+Rarity - Mythic
+Level - 17
+HP - 414
+Attack - 388
+Defense - 98
+Description - A powerful dragon that can warp space and time. It has the ability to travel through portals to other worlds. A very dangerous and powerful creature that should be feared and respected.
+ID:8
+Monster - Tyranitar  
+Rarity - Legendary  
+Level - 15  
+HP - 312
+Attack - 320
+Defense - 135  
+Description - An ancient creature that can crush even the strongest of foes. It is said to be able to eat mountains for breakfast. A powerful and terrifying creature that should be taken seriously.
+ID:9
+Monster - Ho-Oh 
+Rarity - Legendary
+Level - 19
+HP - 454
+Attack - 301
+Defense - 86
+Description - An extremely powerful bird that can create life from its flame. Its power is limitless, and its reach is endless. A mighty and benevolent creature that should be worshipped and respected.
+ID:10
+Monster - Groudon 
+Rarity - Mythic  
+Level - 21
+HP - 470
+Attack - 410
+Defense - 90
+Description - A massive beast that rises from the ground. Its presence is enough to make the world tremble with quakes. A powerful and unstoppable force that should be worshipped and feared.
