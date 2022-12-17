@@ -9,15 +9,21 @@ public class CardSpawnEffectControl : MonoBehaviour
 
     public float duration = 0.2f;
 
+    public float destroyTime = 1;
 
     public ParticleSystem spawnPar;
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.S))
+    //    {
+    //        SetMatEffect();
+    //    }
+    //}
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SetMatEffect();
-        }
+        SetMatEffect();
+        Destroy(gameObject, destroyTime);
     }
 
     public void SetMatEffect()
