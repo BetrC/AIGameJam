@@ -34,6 +34,7 @@ class PokemonManager():
         return random.randint(0, len(self.pokemon_list) - 1)
 
     def get_pokemon_info_by_id(self, pokemonId):
+        pokemonId -= 1
         if pokemonId < 0 or pokemonId > len(self.pokemon_list) - 1:
             return None
         return self.pokemon_list[pokemonId]
