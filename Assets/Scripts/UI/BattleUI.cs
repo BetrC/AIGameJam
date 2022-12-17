@@ -1,6 +1,6 @@
-using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Security.Permissions;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 
@@ -14,12 +14,15 @@ public class BattleUI : MonoBehaviour
 
     private List<BattleStep> _battleSteps;
 
+    public List<BaseAttackAnim> AttackAnims;
 
     private void Awake()
     {
         SelfData = GameManager.Instance.BattleData.player;
         OtherData = GameManager.Instance.BattleData.enemy;
         _battleSteps = GameManager.Instance.BattleData.battle_steps;
+
+        AttackAnims = transform.GetComponents<BaseAttackAnim>().ToList();
 
         self.SetData(SelfData);
         other.SetData(OtherData);
@@ -28,19 +31,35 @@ public class BattleUI : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.ChangeBgMusic("fightBG");
+        
         // 模拟战斗
         var sequence = DOTween.Sequence();
-        sequence = sequence.AppendCallback(ShowStartView).AppendInterval(1.8f);
-        foreach (var step in _battleSteps)
+        sequence = sequence.AppendCallback(ShowStartView).AppendInterval(1.8f).AppendCallback((() =>
         {
-            sequence = sequence.AppendCallback(() => ShowBattleStep(step)).AppendInterval(1f);
-        }
-
-        sequence = sequence.AppendCallback(DestroyLoser);
-        sequence.AppendCallback(ShowFinishView);
+            StartCoroutine(DoBattleStep());
+        }));
     }
 
-    private void ShowBattleStep(BattleStep step)
+    private IEnumerator DoBattleStep()
+    {
+        var sequence = DOTween.Sequence();
+        foreach (var step in _battleSteps)
+        {
+            var index = Random.Range(0, AttackAnims.Count);
+            var anim = AttackAnims[index];
+            var from = step.attack_from == 0 ? self : other;
+            var to = step.attack_from == 0 ? other : self;
+            float time = anim.SetAttackAnim(from.transform as RectTransform, to.transform as RectTransform);
+            yield return new WaitForSeconds(time);
+            ApplyFightHealth(step);
+            yield return null;
+        }
+        DestroyLoser();
+        yield return new WaitForSeconds(1f);
+        ShowFinishView();
+    }
+
+    private void ApplyFightHealth(BattleStep step)
     {
         SelfData.HP = step.health_list[0];
         self.UpdateHealth(SelfData.HP);
