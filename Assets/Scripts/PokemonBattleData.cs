@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class BattleStep
 {
-    public int attack_from;
+    public int atk_from;
     public int hurt;
     public List<int> health_list;
 }

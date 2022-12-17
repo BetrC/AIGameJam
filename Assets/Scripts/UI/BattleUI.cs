@@ -47,8 +47,8 @@ public class BattleUI : MonoBehaviour
         {
             var index = Random.Range(0, AttackAnims.Count);
             var anim = AttackAnims[index];
-            var from = step.attack_from == 0 ? self : other;
-            var to = step.attack_from == 0 ? other : self;
+            var from = step.atk_from == 0 ? self : other;
+            var to = step.atk_from == 0 ? other : self;
             float time = anim.SetAttackAnim(from.transform as RectTransform, to.transform as RectTransform);
             yield return new WaitForSeconds(time);
             ApplyFightHealth(step);
@@ -94,7 +94,7 @@ public class BattleUI : MonoBehaviour
 
     void ShowFinishView()
     {
-        int addCoin = 114514;
+        int addCoin = Random.Range(66, 115);
         var prefab = Utility.GetPrefab("GameFinishView");
         var panel = Instantiate(prefab, Utility.UIRoot).GetComponent<GameFinishView>();
         panel.Show(GetLoser() == 1, addCoin);
