@@ -33,12 +33,15 @@ class CommandHandler():
             return ERROR_MSG_ARGS_WRONG.encode('utf-8')
         if not 'user_id' in param:
             return ERROR_MSG_ARGS_WRONG.encode('utf-8')
-        userId = int(param['user_id'][0])
-        pokemonId = int(param['pokemon_id'][0])
-        if battleManager.is_battle_list_contains(userId, pokemonId):
-            return ERROR_MSG_BATTLE_EXIST.encode('utf-8')
-        battleManager.add_into_battle_list(userId, pokemonId)
-        return SUCCESS_MSG.encode('utf-8')
+        try:
+            userId = int(param['user_id'][0])
+            pokemonId = int(param['pokemon_id'][0])
+            if battleManager.is_battle_list_contains(userId, pokemonId):
+                return ERROR_MSG_BATTLE_EXIST.encode('utf-8')
+            battleManager.add_into_battle_list(userId, pokemonId)
+            return SUCCESS_MSG.encode('utf-8')
+        except ValueError:
+            return ERROR_MSG_ARGS_WRONG.encode('utf-8')
 
     def on_get_pokemon_img(self, param):
         if not 'pokemon_id' in param:
@@ -53,12 +56,15 @@ class CommandHandler():
     def on_check_battle_info(self, param):
         if not 'user_id' in param:
             return ERROR_MSG_ARGS_WRONG.encode('utf-8')
-        userId = int(param['user_id'][0])
-        simplyInfo = battleManager.check_battle_info_by_user_id(userId)
-        if simplyInfo is None:
-            return ERROR_MSG_BATTLE_NOT_START.encode('utf-8')
-        battle_info = {'player': pokemonManager.get_pokemon_info_by_id(simplyInfo[0]),
-                       'enemy': pokemonManager.get_pokemon_info_by_id(simplyInfo[1]),
-                       'first_atk': simplyInfo[2],
-                       'battle_steps': pokemonManager.simulate_battle_steps(simplyInfo[0], simplyInfo[1], simplyInfo[2])}
-        return json.dumps(battle_info).encode('utf-8')
+        try:
+            userId = int(param['user_id'][0])
+            simplyInfo = battleManager.check_battle_info_by_user_id(userId)
+            if simplyInfo is None:
+                return ERROR_MSG_BATTLE_NOT_START.encode('utf-8')
+            battle_info = {'player': pokemonManager.get_pokemon_info_by_id(simplyInfo[0]),
+                           'enemy': pokemonManager.get_pokemon_info_by_id(simplyInfo[1]),
+                           'first_atk': simplyInfo[2],
+                           'battle_steps': pokemonManager.simulate_battle_steps(simplyInfo[0], simplyInfo[1], simplyInfo[2])}
+            return json.dumps(battle_info).encode('utf-8')
+        except ValueError:
+            return ERROR_MSG_ARGS_WRONG.encode('utf-8')
