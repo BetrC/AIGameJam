@@ -56,7 +56,7 @@ public class BulletAttackAnim : BaseAttackAnim
                 bulletGo.transform.position = new Vector3(attackObjRect.transform.position.x, attackObjRect.transform.position.y, attackObjRect.transform.position.z - 30);
 
                 path[0] = bulletGo.transform.position;
-                path[1] = new Vector3(targetObjRect.transform.position.x + Random.Range(-40, 40f), (targetObjRect.transform.position.y + attackObjRect.transform.position.y) / 2, attackObjRect.transform.position.z - 30);
+                path[1] = new Vector3(targetObjRect.transform.position.x + Random.Range(-20, 20f), (targetObjRect.transform.position.y + attackObjRect.transform.position.y) / 2, attackObjRect.transform.position.z - 30);
                 path[2] = targetObjRect.transform.position;
 
                 bulletGo.transform.DOPath(path, 0.5f, PathType.CatmullRom).SetLookAt(0.01f).SetEase(Ease.Linear).OnComplete(() =>
