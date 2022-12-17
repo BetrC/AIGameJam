@@ -12,10 +12,13 @@ public class DrawCardPanel : UIPanelBase
 
     public override void OnShow()
     {
+        AudioManager.Instance.ChangeBgMusic("gainBG");
+        
         buttonReturn.gameObject.SetActive(false);
         isDrawing = true;
         var prefab = Utility.GetPrefab("loadingHint");
         var loading = GameObject.Instantiate(prefab, Utility.UIRoot);
+        AudioManager.Instance.PlaySound("gainStart");
         WebDownloader.Instance.GetText("http://123.207.251.146:4567/request_pokemon", s =>
         {
             Destroy(loading);

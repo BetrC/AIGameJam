@@ -24,6 +24,7 @@ public abstract class UIPanelBase : MonoBehaviour
 
     public void Close()
     {
+        AudioManager.Instance.PlaySound("clickButton");
         UIManager.Instance.ShowPanel(typeof(MainUI));
     }
 }
