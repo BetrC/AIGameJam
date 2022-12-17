@@ -1,7 +1,7 @@
-10
+20
 ID:1
 Monster - Blackhole Monster
-Rarity - Legendary
+Rarity - Epic
 Level - 10
 HP - 160
 Attack - 145
@@ -79,3 +79,83 @@ HP - 470
 Attack - 410
 Defense - 90
 Description - A massive beast that rises from the ground. Its presence is enough to make the world tremble with quakes. A powerful and unstoppable force that should be worshipped and feared.
+ID:11
+Monster - Mega Mewtwo Y  
+Rarity - Mythic  
+Level - 23  
+HP - 446  
+Attack - 284  
+Defense - 96  
+Description - A powerful mutant of mew that can harness the powers of both the sun and the moon. It is said to be the strongest creature in the universe. A truly unstoppable and all-powerful being that should be feared and respected.
+ID:12
+Monster - Mewtwo
+Rarity - Mythic
+Level - 23
+HP - 500
+Attack - 515
+Defense - 110
+Description - A powerful psychic pokemon that can destroy anything with its mind. It is said that it can create a whole world in its eyes. A terrifying and powerful creature that should be feared and respected.
+ID:13
+Monster - Giratina
+Rarity - Legendary 
+Level - 22
+HP - 530
+Attack - 455
+Defense - 104
+Description - A demonic creature that can be found in the Distortion World. It is said to feed on the souls of its victims, and its power is beyond any mortal's comprehension. A dark and frightening creature that should be feared and respected.
+ID:14
+Monster - Rhyperior
+Rarity - Mythic  
+Level - 23  
+HP - 498  
+Attack - 357  
+Defense - 88  
+Description - A monstrous beast that can rip through any obstacle in its way. Its attacks are deadly and powerful, and its strength is unmatched. A ferocious and unstoppable creature that should be feared and respected.
+ID:15
+Monster - Giratina
+Rarity - Mythic  
+Level - 25  
+HP - 560  
+Attack - 391  
+Defense - 114
+Description - An otherworldly dragon that can manipulate time and space. It is said that it was created by the gods to keep watch over the world. A powerful and mysterious creature that should be revered and feared.
+ID:16
+Monster - Yveltal
+Rarity - Mythic  
+Level - 27
+HP - 585  
+Attack - 445  
+Defense - 122
+Description - An evil bird that feeds on pain and suffering. It is said that it can destroy the world by draining it of its energy. A very dangerous and powerful creature that should be feared and respected.
+ID:17
+Monster - Lugia
+Rarity - Mythic  
+Level - 29  
+HP - 640  
+Attack - 512  
+Defense - 130
+Description - A powerful and mysterious bird that can control the minds of its victims. It is said to have the power to destroy the world if it so chooses. A powerful and mighty creature that should be feared and revered.
+ID:18
+Monster - Rexx  
+Rarity - Legendary  
+Level - 31  
+HP - 720  
+Attack - 610  
+Defense - 155
+Description - A powerful and mysterious being that can read the thoughts of others. It is said that it was created by the gods to be the most powerful creature in existence. A powerful and unstoppable force that should be feared and revered.
+ID:19
+Monster - Steely
+Rarity - Mythic  
+Level - 33  
+HP - 750  
+Attack - 657  
+Defense - 180
+Description - A powerful and mysterious creature that can control light and darkness. It is said to be able to destroy planets with just a thought. A powerful and unstoppable creature that should be revered and feared.
+ID:20
+Monster - Regigigas
+Rarity - Legendary  
+Level - 33  
+HP - 817  
+Attack - 640  
+Defense - 165
+Description - An ancient creature that looks like it could devour the world at a moment’s notice. It can use its power to manipulate time and space. A powerful and unstoppable force of destruction that should be worshipped and feared.
