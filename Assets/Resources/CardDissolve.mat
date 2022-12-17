@@ -61,7 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FadeTex:
         m_Texture: {fileID: 2800000, guid: 7aad8c583ef292e48b06af0d1f2fab97, type: 3}
-        m_Scale: {x: 0.2, y: 0.2}
+        m_Scale: {x: 0.4, y: 0.4}
         m_Offset: {x: 0, y: 0}
     - _GlowTex:
         m_Texture: {fileID: 0}
@@ -138,7 +138,7 @@ Material:
     - _DistortTexYSpeed: 5
     - _DstBlend: 0
     - _EditorDrawers: 6
-    - _FadeAmount: 0.9
+    - _FadeAmount: -0.1
     - _FadeBurnGlow: 83
     - _FadeBurnTransition: 0.047
     - _FadeBurnWidth: 0.025
@@ -165,7 +165,7 @@ Material:
     - _GrassRadialBend: 0.1
     - _GrassSpeed: 2
     - _GrassWind: 20
-    - _GreyscaleBlend: 1
+    - _GreyscaleBlend: 0
     - _GreyscaleLuminosity: -0.136
     - _GreyscaleOutline: 0
     - _HandDrawnAmount: 10.25
@@ -277,3 +277,4 @@ Material:
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
