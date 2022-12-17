@@ -29,6 +29,7 @@ public class WebDownloader : MonoSingleton<WebDownloader>
 
     public void GetText(string url, Action<string> onSuccess, Action<Exception> onFailure = null)
     {
+        Debug.Log(url);
         StartCoroutine(IE_TextDownloader(url, onSuccess, onFailure));
     }
 
