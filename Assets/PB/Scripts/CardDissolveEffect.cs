@@ -20,13 +20,11 @@ public class CardDissolveEffect : MonoBehaviour
         effectMat = (Material)Resources.Load("CardDissolve");
     }
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SetDeadEffect(testObj);
-        }
+        SetDeadEffect(gameObject);
     }
+
 
     public void SetDeadEffect(GameObject targetObj)
     {
