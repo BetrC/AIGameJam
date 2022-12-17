@@ -2,11 +2,11 @@
 public class PokemonData
 {
     public int id;
-    public string Name;
-    public string Race;
-    public int Level;
-    public int HP;
-    public int Attack;
-    public int Defence;
-    public string Description;
+    public string name;
+    public string race;
+    public int level;
+    public int hP;
+    public int atk;
+    public int defence;
+    public string desc;
 }

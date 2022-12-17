@@ -9,7 +9,7 @@ public class SearchBattlePanel : UIPanelBase
     private bool IsSearching = false;
 
     // 震动检测
-    void Update ()
+    void Update()
     {
         if (IsSearching)
             return;
@@ -29,18 +29,18 @@ public class SearchBattlePanel : UIPanelBase
         if (loading != null)
             Destroy(loading);
     }
-    
+
     public void SearchBattle()
     {
         IsSearching = true;
         loading = Utility.ShowLoading();
     }
-    
-    
+
+
     private void RequestBattle()
     {
         // 请求对局
-        WebDownloader.Instance.GetText("http://43.153.64.79:4567/request_battle?pokemon_id=5&user_id=0", s =>
+        WebDownloader.Instance.GetText("http://123.207.251.146:4567/request_battle?pokemon_id=5&user_id=0", s =>
         {
             if (s == "success")
             {
@@ -49,16 +49,13 @@ public class SearchBattlePanel : UIPanelBase
             {
                 RequestBattle();
             }
-        }, exception =>
-        {
-            RequestBattle();
-        });
+        }, exception => { RequestBattle(); });
     }
 
     private void RequestBattleInfo()
     {
         // 请求对局
-        WebDownloader.Instance.GetText("http://43.153.64.79:4567/request_battle?pokemon_id=5&user_id=0", s =>
+        WebDownloader.Instance.GetText("http://123.207.251.146:4567/check_battle_info?user_id=0", s =>
             {
                 var battleData = JsonUtility.FromJson<PokemonBattleData>(s);
                 GameManager.Instance.BattleData = battleData;
@@ -69,7 +66,7 @@ public class SearchBattlePanel : UIPanelBase
                 // 未找到对局
             });
     }
-    
+
     public override void OnShow()
     {
     }
