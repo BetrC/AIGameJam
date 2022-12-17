@@ -1,7 +1,7 @@
 10
 ID:1
 Monster - Blackhole Monster
-Rarity - Epic
+Rarity - Legendary
 Level - 10
 HP - 160
 Attack - 145
