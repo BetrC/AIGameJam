@@ -54,7 +54,7 @@ public class BattleUI : MonoBehaviour
             ApplyFightHealth(step);
             yield return null;
         }
-        DestroyLoser();
+        DissolveLoser();
         yield return new WaitForSeconds(1f);
         ShowFinishView();
     }
@@ -67,16 +67,16 @@ public class BattleUI : MonoBehaviour
         other.UpdateHealth(OtherData.HP);
     }
 
-    private void DestroyLoser()
+    private void DissolveLoser()
     {
         var finalStep = _battleSteps[_battleSteps.Count - 1];
         if (finalStep.health_list[0] <= 0)
         {
-            Destroy(self.gameObject);
+            self.gameObject.AddComponent<CardDissolveEffect>();
         }
         else
         {
-            Destroy(other.gameObject);
+            other.gameObject.AddComponent<CardDissolveEffect>();
         }
     }
 
