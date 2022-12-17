@@ -481,6 +481,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: card
       objectReference: {fileID: 0}
+    - target: {fileID: 6601666163380016377, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 59.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6601666163380016377, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -56.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
 --- !u!224 &7294530386752413710 stripped
