@@ -15,6 +15,7 @@ public class MainUI : UIPanelBase
 
     public override void OnShow()
     {
+        AudioManager.Instance.ChangeBgMusic("mainBG");
         pokemon.SetData(GameManager.Instance.currentPokemon);
         moneyText.text = $"游戏币：{GameManager.Instance.Coin}";
     }
@@ -34,6 +35,7 @@ public class MainUI : UIPanelBase
 
     public void Battle()
     {
+        
         if (GameManager.Instance.currentPokemon == null)
         {
             // 当前没有pokemon可用，请先抽卡
@@ -55,6 +57,7 @@ public class MainUI : UIPanelBase
 
     private void RequestBattle()
     {
+        AudioManager.Instance.PlaySound("clickButton");
         // 请求对局
         WebDownloader.Instance.GetText(
             $"http://123.207.251.146:4567/request_battle?pokemon_id={GameManager.Instance.currentPokemon.ID}&user_id={GameManager.Instance.userId}", s =>
@@ -120,6 +123,7 @@ public class MainUI : UIPanelBase
 
     public void OnClickDrawCardButton()
     {
+        AudioManager.Instance.PlaySound("clickButton");
         UIManager.Instance.ShowPanel(typeof(DrawCardPanel));
     }
 

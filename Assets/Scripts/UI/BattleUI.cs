@@ -27,6 +27,7 @@ public class BattleUI : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.Instance.ChangeBgMusic("fightBG");
         // 模拟战斗
         var sequence = DOTween.Sequence();
         sequence = sequence.AppendCallback(ShowStartView).AppendInterval(1.8f);
