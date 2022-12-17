@@ -60,5 +60,5 @@ class CommandHandler():
         battle_info = {'player': pokemonManager.get_pokemon_info_by_id(simplyInfo[0]),
                        'enemy': pokemonManager.get_pokemon_info_by_id(simplyInfo[1]),
                        'first_atk': simplyInfo[2],
-                       'battle_steps': simulate_battle_steps(0, 0)}
+                       'battle_steps': pokemonManager.simulate_battle_steps(simplyInfo[0], simplyInfo[1], simplyInfo[2])}
         return json.dumps(battle_info).encode('utf-8')
