@@ -4,16 +4,8 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class WebDownloader : MonoBehaviour
+public class WebDownloader : MonoSingleton<WebDownloader>
 {
-    public static WebDownloader Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-
     public void DownloadImage(string imageUrl, string fileName, Action<Texture2D> onSuccess,
         Action<Exception> onFailure = null, bool reDownload = false)
     {
@@ -74,7 +66,7 @@ public class WebDownloader : MonoBehaviour
                 Directory.CreateDirectory(savePath);
             }
 
-            File.WriteAllBytes(savePath + filename, image.GetRawTextureData());
+            File.WriteAllBytes(savePath + "/" + filename + ".png", image.EncodeToPNG());
         }
         catch (Exception e)
         {
@@ -84,15 +76,16 @@ public class WebDownloader : MonoBehaviour
 
     private static Texture2D GetImage(string fileName)
     {
-        string savePath = Application.persistentDataPath + "/";
+        string filePath = Application.persistentDataPath + "/" + fileName + ".png";
 
         try
         {
-            if (File.Exists(savePath + fileName))
+            if (File.Exists(filePath))
             {
-                byte[] bytes = File.ReadAllBytes(savePath + fileName);
+                
+                byte[] bytes = File.ReadAllBytes(filePath);
                 Texture2D texture = new Texture2D(1, 1);
-                texture.LoadRawTextureData(bytes);
+                texture.LoadImage(bytes);
                 return texture;
             }
 
