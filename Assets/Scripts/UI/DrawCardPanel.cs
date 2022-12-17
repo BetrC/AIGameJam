@@ -7,8 +7,12 @@ public class DrawCardPanel : UIPanelBase
 {
     public bool isDrawing = false;
 
+    public UIPokemonCard card;
+    public Button buttonReturn;
+
     public override void OnShow()
     {
+        buttonReturn.gameObject.SetActive(false);
         isDrawing = true;
         var prefab = Utility.GetPrefab("loadingHint");
         var loading = GameObject.Instantiate(prefab, Utility.UIRoot);
@@ -16,14 +20,15 @@ public class DrawCardPanel : UIPanelBase
         {
             Destroy(loading);
             var pokemon = JsonUtility.FromJson<PokemonData>(s);
-            // 展示一下获得的卡牌
-            var prefab = Utility.GetPrefab("pokemonGet");
-            var view = GameObject.Instantiate(prefab, Utility.UIRoot).GetComponent<PokemonGetView>();
-            view.Init(pokemon);
+            card.SetData(pokemon);
+            buttonReturn.gameObject.SetActive(true);
+            GameManager.Instance.currentPokemon = pokemon;
+            GameManager.Instance.AddPokemon(pokemon);
         }, (exception =>
         {
             Debug.Log(exception.Message);
             Destroy(loading);
+            buttonReturn.gameObject.SetActive(true);
         }));
     }
 
