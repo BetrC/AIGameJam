@@ -58,7 +58,7 @@ public class GameManager : MonoSingleton<GameManager>
         catch (Exception e)
         {
             // 没有找到存档就用默认数据
-            Coin = 1000;
+            _coin = 1000;
             pokemons = new List<PokemonData>();
             userId = GenerateUniqueUserId();
             SaveData();
@@ -66,7 +66,7 @@ public class GameManager : MonoSingleton<GameManager>
         }
 
         var file_save = JsonUtility.FromJson<FileSaveInfo>(text);
-        Coin = file_save.money;
+        _coin = file_save.money;
         pokemons = file_save.Pokemons;
         userId = file_save.user_id;
         if (file_save.currentPokemon.Monster == "")

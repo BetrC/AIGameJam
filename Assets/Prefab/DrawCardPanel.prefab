@@ -176,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5025487385738788339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -192,10 +192,10 @@ RectTransform:
   m_Father: {fileID: 5025487386365034052}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 152}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchorMin: {x: 0.28679958, y: 0.16643272}
+  m_AnchorMax: {x: 0.71620315, y: 0.23540498}
+  m_AnchoredPosition: {x: -0.52259827, y: 3.2496033}
+  m_SizeDelta: {x: 0.034976006, y: -0.11159873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5025487385738788336
 CanvasRenderer:
@@ -321,7 +321,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7354203978278113563}
+  - {fileID: 3659356460611263635}
   - {fileID: 5025487385335835002}
   - {fileID: 5025487385738788339}
   m_Father: {fileID: 0}
@@ -384,9 +384,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsShowing: 0
   isDrawing: 0
-  card: {fileID: 7707246194660676775}
+  card: {fileID: 4481758144756767023}
   buttonReturn: {fileID: 5025487385738788338}
---- !u!1001 &3232547377445006210
+--- !u!1001 &8654674297520989706
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -407,27 +407,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.79771477
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.72700006
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.19962706
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.273
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 3.6451392
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 0.97574955
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_LocalPosition.x
@@ -459,11 +459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.7278
+      value: 0.5585861
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.0917
+      value: -0.039794922
       objectReference: {fileID: 0}
     - target: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -483,15 +483,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
---- !u!224 &7354203978278113563 stripped
+--- !u!224 &3659356460611263635 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5391707309895514777, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
-  m_PrefabInstance: {fileID: 3232547377445006210}
+  m_PrefabInstance: {fileID: 8654674297520989706}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7707246194660676775 stripped
+--- !u!114 &4481758144756767023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5055839387359772453, guid: 42ff1ec72dc076145b2061e888058e30, type: 3}
-  m_PrefabInstance: {fileID: 3232547377445006210}
+  m_PrefabInstance: {fileID: 8654674297520989706}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

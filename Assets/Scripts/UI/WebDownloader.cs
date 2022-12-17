@@ -66,7 +66,7 @@ public class WebDownloader : MonoSingleton<WebDownloader>
                 Directory.CreateDirectory(savePath);
             }
 
-            File.WriteAllBytes(savePath + filename, image.GetRawTextureData());
+            File.WriteAllBytes(savePath + "/" + filename + ".png", image.EncodeToPNG());
         }
         catch (Exception e)
         {
@@ -76,15 +76,16 @@ public class WebDownloader : MonoSingleton<WebDownloader>
 
     private static Texture2D GetImage(string fileName)
     {
-        string savePath = Application.persistentDataPath + "/";
+        string filePath = Application.persistentDataPath + "/" + fileName + ".png";
 
         try
         {
-            if (File.Exists(savePath + fileName))
+            if (File.Exists(filePath))
             {
-                byte[] bytes = File.ReadAllBytes(savePath + fileName);
+                
+                byte[] bytes = File.ReadAllBytes(filePath);
                 Texture2D texture = new Texture2D(1, 1);
-                texture.LoadRawTextureData(bytes);
+                texture.LoadImage(bytes);
                 return texture;
             }
 

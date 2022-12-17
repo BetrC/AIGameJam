@@ -31,7 +31,7 @@ public class UIPokemonCard : MonoBehaviour
 
     public void SetData(PokemonData data)
     {
-        gameObject.SetActive(data != null);
+        gameObject.SetActive(false);
         if (data == null)
             return;
         nameText.text = data.Monster;
@@ -43,6 +43,7 @@ public class UIPokemonCard : MonoBehaviour
         healthText.text = data.HP.ToString();
         var quality = Utility.GetCardQuality(data.Rarity);
         SetQualitySprite(quality);
+        gameObject.SetActive(true);
 
         WebDownloader.Instance.DownloadImage("http://123.207.251.146:4567/get_pokemon_img?pokemon_id=" + data.ID,
             data.ID.ToString(),
@@ -50,6 +51,11 @@ public class UIPokemonCard : MonoBehaviour
             {
                 icon.sprite = Sprite.Create(sprite, new Rect(0, 0, sprite.width, sprite.height), Vector2.zero);
             });
+    }
+
+    public void UpdateHealth(int value)
+    {
+        healthText.text = value.ToString();
     }
 
     public void SetQualitySprite(CardQuality quality)
