@@ -5168,7 +5168,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 38.2
+      scalar: 31.8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5221,7 +5221,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 56.9
+      scalar: 48
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9850,8 +9850,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -56.69}
-  m_SizeDelta: {x: 642.7, y: 1031.3}
+  m_AnchoredPosition: {x: 0, y: -43.9}
+  m_SizeDelta: {x: 575.6, y: 899.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3303303566543869631
 CanvasRenderer:
@@ -9927,7 +9927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.2}
+  m_AnchoredPosition: {x: 0, y: 0.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!198 &3303303567716978180
@@ -10182,7 +10182,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 38.2
+      scalar: 34.06
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10235,7 +10235,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 56.9
+      scalar: 51.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2

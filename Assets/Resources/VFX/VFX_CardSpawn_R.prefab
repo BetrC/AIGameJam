@@ -227,7 +227,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.20784312, g: 0.5294118, b: 0.4167779, a: 1}
+      maxColor: {r: 0.20784314, g: 0.5294118, b: 0.41568628, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -289,7 +289,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 38.2
+      scalar: 31.8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -342,7 +342,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 56.9
+      scalar: 48
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4971,8 +4971,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -56.69}
-  m_SizeDelta: {x: 642.7, y: 1031.3}
+  m_AnchoredPosition: {x: 0, y: -43.9}
+  m_SizeDelta: {x: 575.6, y: 899.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6691315716691739812
 CanvasRenderer:
@@ -5295,7 +5295,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.130162, g: 0.6132076, b: 0.47762325, a: 1}
+      maxColor: {r: 0.12941177, g: 0.6117647, b: 0.47843137, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5357,7 +5357,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 38.2
+      scalar: 34.06
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5410,7 +5410,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 56.9
+      scalar: 51.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
