@@ -9,7 +9,7 @@ public class CardSpawnEffectControl : MonoBehaviour
 
     public float duration = 0.2f;
 
-    public float destroyTime = 1;
+  //  public float destroyTime = 1;
 
     public ParticleSystem spawnPar;
 
@@ -23,14 +23,19 @@ public class CardSpawnEffectControl : MonoBehaviour
     private void Start()
     {
         SetMatEffect();
-        Destroy(gameObject, destroyTime);
+        Destroy(gameObject, duration+1);
     }
 
     public void SetMatEffect()
     {
-        spawnPar.Play();
+        DOVirtual.DelayedCall(duration - 0.5f, () => {
+
+            spawnPar.Play();
+        });
+
         effectMat.SetFloat("_FadeAmount", -0.1f);
         effectMat.DOFloat(1, "_FadeAmount", duration).SetEase(Ease.Linear);
-        Debug.Log(1);
+
+        AudioManager.Instance.PlaySound("gainOK");
     }
 }
