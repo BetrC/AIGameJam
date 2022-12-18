@@ -29,6 +29,8 @@ public class UIPokemonCard : MonoBehaviour
     public Image qualityImage;
     public Image icon;
 
+    public Image mask;
+
     public void SetData(PokemonData data)
     {
         gameObject.SetActive(false);
@@ -56,6 +58,11 @@ public class UIPokemonCard : MonoBehaviour
     public void UpdateHealth(int value)
     {
         healthText.text = value.ToString();
+    }
+
+    public void SetMaskVisible(bool visible)
+    {
+        mask.gameObject.SetActive(visible);
     }
 
     public void SetQualitySprite(CardQuality quality)
