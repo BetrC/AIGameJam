@@ -101,7 +101,7 @@ public class BattleUI : MonoBehaviour
 
     void ShowFinishView()
     {
-        int addCoin = Random.Range(66, 115);
+        int addCoin = 328;
         var prefab = Utility.GetPrefab("GameFinishView");
         var panel = Instantiate(prefab, Utility.UIRoot).GetComponent<GameFinishView>();
         panel.Show(GetLoser() == 1, addCoin);

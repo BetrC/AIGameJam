@@ -12,7 +12,10 @@ public class GameFinishView : MonoBehaviour
         finishText.text = win ? "你获得了胜利!" : "你被击败了...";
         scoreText.text = win ? $"获得{score}游戏币" : "";
         if (win)
+        {
             GameManager.Instance.Coin += score;
+            Utility.ShowHint($"$获得了{score}游戏币");
+        }
         AudioManager.Instance.PlaySound(win ? "battleVictor" : "battleFailed");
         gameObject.SetActive(true);
     }

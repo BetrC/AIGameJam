@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    private int _coin = 1000;
+    private int _coin = 1280;
 
     // 游戏币
     public int Coin
@@ -58,7 +58,7 @@ public class GameManager : MonoSingleton<GameManager>
         catch (Exception e)
         {
             // 没有找到存档就用默认数据
-            _coin = 1000;
+            _coin = 1280;
             pokemons = new List<PokemonData>();
             userId = GenerateUniqueUserId();
             SaveData();
