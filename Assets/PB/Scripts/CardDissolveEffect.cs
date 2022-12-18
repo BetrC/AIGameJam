@@ -33,16 +33,26 @@ public class CardDissolveEffect : MonoBehaviour
         Image[] images = targetObj.GetComponentsInChildren<Image>();
         Text[] texts = targetObj.GetComponentsInChildren<Text>();
 
-        for (int i = 0; i < images.Length; i++)
+        while (images != null && images.Length > 0)
         {
-            images[i].material = mat;
+            for (int i = 0; i < images.Length; i++)
+            {
+                images[i].material = mat;
 
+            }
+            break;
+        }
+        while (texts != null && texts.Length > 0)
+        {
+            for (int i = 0; i < texts.Length; i++)
+            {
+                texts[i].material = mat;
+            }
+            break;
         }
 
-        for (int i = 0; i < texts.Length; i++)
-        {
-            texts[i].material = mat;
-        }
+
+   
     
         mat.SetFloat("_FadeAmount", 0.08f);
         mat.DOFloat(0.9f, "_FadeAmount", duration).SetEase(Ease.Linear);
@@ -53,6 +63,7 @@ public class CardDissolveEffect : MonoBehaviour
         DOVirtual.DelayedCall(0.5f, () => {
 
             mat.SetFloat("_ShakeUvSpeed", 0f);
+            Destroy(this);
         });
 
 

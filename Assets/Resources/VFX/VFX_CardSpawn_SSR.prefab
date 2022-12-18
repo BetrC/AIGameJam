@@ -53,14 +53,14 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.5
+    scalar: 6
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -4939,7 +4939,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0.5
+    scalar: 6
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -9943,7 +9943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectMat: {fileID: 2100000, guid: d7b02ce619c0a3f4e94a16fc646d0f01, type: 2}
-  duration: 0.5
+  duration: 6
   destroyTime: 1
   spawnPar: {fileID: 4175256348212898607}
 --- !u!1 &4175256348212898604
@@ -10008,7 +10008,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 5.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
