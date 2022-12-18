@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.Design;
 using DG.Tweening;
 using UI;
 using UnityEngine;
@@ -28,14 +29,17 @@ public class MainUI : UIPanelBase
         if (dy > ShakeThreshold)
         {
             // 触发震动
+            Battle();
         }
     }
 
     private GameObject loading;
+    private bool isSearchingBattle = false;
 
     public void Battle()
     {
-        
+        if (isSearchingBattle)
+            return;
         if (GameManager.Instance.currentPokemon == null)
         {
             // 当前没有pokemon可用，请先抽卡
@@ -51,6 +55,7 @@ public class MainUI : UIPanelBase
     {
         if (loading != null)
             Destroy(loading);
+        isSearchingBattle = false;
     }
 
     private float requestBattleInfoStartTime = 0f;
@@ -58,6 +63,7 @@ public class MainUI : UIPanelBase
     private void RequestBattle()
     {
         AudioManager.Instance.PlaySound("clickButton");
+        isSearchingBattle = true;
         // 请求对局
         WebDownloader.Instance.GetText(
             $"http://123.207.251.146:4567/request_battle?pokemon_id={GameManager.Instance.currentPokemon.ID}&user_id={GameManager.Instance.userId}", s =>
