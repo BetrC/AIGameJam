@@ -5099,7 +5099,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 31.8
+      scalar: 33.86
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5152,7 +5152,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 48
+      scalar: 51.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9721,7 +9721,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 16
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -9729,7 +9729,7 @@ ParticleSystemRenderer:
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
-  m_SortingFudge: 0
+  m_SortingFudge: 55
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 0
@@ -9902,7 +9902,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6691315717864397852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -47}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6691315716412934133}
@@ -10167,7 +10167,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 34.06
+      scalar: 35.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10220,7 +10220,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 51.2
+      scalar: 52.91
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14731,7 +14731,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 55
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -19610,7 +19610,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 69
   m_RenderMode: 1
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -19618,7 +19618,7 @@ ParticleSystemRenderer:
   m_CameraVelocityScale: 0
   m_VelocityScale: 0.2
   m_LengthScale: 4
-  m_SortingFudge: 0
+  m_SortingFudge: 55
   m_NormalDirection: 1
   m_ShadowBias: 0
   m_RenderAlignment: 0
