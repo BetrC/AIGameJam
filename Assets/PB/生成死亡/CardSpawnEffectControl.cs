@@ -31,5 +31,6 @@ public class CardSpawnEffectControl : MonoBehaviour
         spawnPar.Play();
         effectMat.SetFloat("_FadeAmount", -0.1f);
         effectMat.DOFloat(1, "_FadeAmount", duration).SetEase(Ease.Linear);
+        Debug.Log(1);
     }
 }
