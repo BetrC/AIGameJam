@@ -40,7 +40,7 @@ public class DrawCardPanel : UIPanelBase
             buttonReturn.gameObject.SetActive(true);
         }));
     }
-
+    
     private void ShowCard(string s, float time)
     {
         time = Mathf.Max(time, 1);
@@ -52,6 +52,8 @@ public class DrawCardPanel : UIPanelBase
         card.SetMaskVisible(false);
         GameManager.Instance.currentPokemon = pokemon;
         GameManager.Instance.AddPokemon(pokemon);
+        GameManager.Instance.Coin -= 648;
+        Utility.ShowHint("消耗了648游戏币");
         DOVirtual.DelayedCall(time, (() => buttonReturn.gameObject.SetActive(true)));
     }
 

@@ -66,7 +66,8 @@ public class MainUI : UIPanelBase
         isSearchingBattle = true;
         // 请求对局
         WebDownloader.Instance.GetText(
-            $"http://123.207.251.146:4567/request_battle?pokemon_id={GameManager.Instance.currentPokemon.ID}&user_id={GameManager.Instance.userId}", s =>
+            $"http://123.207.251.146:4567/request_battle?pokemon_id={GameManager.Instance.currentPokemon.ID}&user_id={GameManager.Instance.userId}",
+            s =>
             {
                 if (s == "success" || s == "battle already registered!")
                 {
@@ -77,11 +78,10 @@ public class MainUI : UIPanelBase
                 {
                     Utility.ShowHint(s);
                     HideLoading();
-                    
                 }
             }, exception =>
             {
-                Utility.ShowHint(exception.Message); 
+                Utility.ShowHint(exception.Message);
                 HideLoading();
             });
     }
@@ -130,6 +130,12 @@ public class MainUI : UIPanelBase
     public void OnClickDrawCardButton()
     {
         AudioManager.Instance.PlaySound("clickButton");
+        if (GameManager.Instance.Coin < 648)
+        {
+            Utility.ShowHint("抽卡需要648游戏币，请充值或对战赚取游戏币");
+            return;
+        }
+
         UIManager.Instance.ShowPanel(typeof(DrawCardPanel));
     }
 
