@@ -70,7 +70,7 @@ public class RotateAttackAnim : BaseAttackAnim
                 attackObjRect.DORotate(new Vector3(0, 0, 0), 0.2f);
                 isAttack = false;
             });
-            return 4;
+            return 3.5f;
     }
 
 
