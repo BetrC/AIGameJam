@@ -57,9 +57,9 @@ class PokemonManager():
         return self.pokemon_list[pokemonId]
 
     def simulate_battle_steps(self, pokemonId1, pokemonId2, first_atk):
-        if pokemonId1 < 0 or pokemonId1 > len(self.pokemon_list) - 1:
+        if pokemonId1 < 0 or pokemonId1 > len(self.pokemon_list):
             return None
-        if pokemonId2 < 0 or pokemonId2 > len(self.pokemon_list) - 1:
+        if pokemonId2 < 0 or pokemonId2 > len(self.pokemon_list):
             return None
         pokemon1 = self.get_pokemon_info_by_id(pokemonId1)
         pokemon2 = self.get_pokemon_info_by_id(pokemonId2)
