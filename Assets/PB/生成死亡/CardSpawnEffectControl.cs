@@ -31,11 +31,12 @@ public class CardSpawnEffectControl : MonoBehaviour
         DOVirtual.DelayedCall(duration - 0.5f, () => {
 
             spawnPar.Play();
+            AudioManager.Instance.PlaySound("gainOK");
         });
 
         effectMat.SetFloat("_FadeAmount", -0.1f);
         effectMat.DOFloat(1, "_FadeAmount", duration).SetEase(Ease.Linear);
 
-        AudioManager.Instance.PlaySound("gainOK");
+     
     }
 }
