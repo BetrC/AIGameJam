@@ -4870,7 +4870,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 6
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -9875,7 +9875,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectMat: {fileID: 2100000, guid: d7b02ce619c0a3f4e94a16fc646d0f01, type: 2}
   duration: 6
-  destroyTime: 1
   spawnPar: {fileID: 6691315717864397855}
 --- !u!1 &6691315717864397852
 GameObject:
@@ -9939,7 +9938,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 5.5
+    scalar: 0
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -14818,7 +14817,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 6
+    scalar: 0.5
     minScalar: 0
     maxCurve:
       serializedVersion: 2

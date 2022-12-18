@@ -22,10 +22,14 @@ class PokemonManager():
                     parts = line.split(" - ", 1)
                     key = parts[0]
                     value = parts[1]
-                    pokemonInfo[key] = value[:-1].strip()
                     if key == 'Attack':
                         weight = math.ceil((1.0/math.pow(int(value), 1.5))*1000000)
                         self.weight_list.append(weight)
+                    if key == 'HP':
+                        pokemonInfo[key] = str(int(value) * 2)
+                    else:
+                        pokemonInfo[key] = value[:-1].strip()
+
                 self.pokemon_list.append(pokemonInfo)
         for weight in self.weight_list:
             self.total_weight += weight
@@ -57,9 +61,9 @@ class PokemonManager():
         return self.pokemon_list[pokemonId]
 
     def simulate_battle_steps(self, pokemonId1, pokemonId2, first_atk):
-        if pokemonId1 < 0 or pokemonId1 > len(self.pokemon_list) - 1:
+        if pokemonId1 < 0 or pokemonId1 > len(self.pokemon_list):
             return None
-        if pokemonId2 < 0 or pokemonId2 > len(self.pokemon_list) - 1:
+        if pokemonId2 < 0 or pokemonId2 > len(self.pokemon_list):
             return None
         pokemon1 = self.get_pokemon_info_by_id(pokemonId1)
         pokemon2 = self.get_pokemon_info_by_id(pokemonId2)
