@@ -43,9 +43,16 @@ public class BattleUI : MonoBehaviour
     private IEnumerator DoBattleStep()
     {
         var sequence = DOTween.Sequence();
+        int lastIndex = -1;
         foreach (var step in _battleSteps)
         {
             var index = Random.Range(0, AttackAnims.Count);
+            while (index == lastIndex)
+            {
+                index = Random.Range(0, AttackAnims.Count);
+            }
+
+            lastIndex = index;
             var anim = AttackAnims[index];
             var from = step.atk_from == 0 ? self : other;
             var to = step.atk_from == 0 ? other : self;
