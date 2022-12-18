@@ -22,10 +22,14 @@ class PokemonManager():
                     parts = line.split(" - ", 1)
                     key = parts[0]
                     value = parts[1]
-                    pokemonInfo[key] = value[:-1].strip()
                     if key == 'Attack':
                         weight = math.ceil((1.0/math.pow(int(value), 1.5))*1000000)
                         self.weight_list.append(weight)
+                    if key == 'HP':
+                        pokemonInfo[key] = str(int(value) * 2)
+                    else:
+                        pokemonInfo[key] = value[:-1].strip()
+
                 self.pokemon_list.append(pokemonInfo)
         for weight in self.weight_list:
             self.total_weight += weight
