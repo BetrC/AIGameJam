@@ -33,10 +33,7 @@ public class DrawCardPanel : UIPanelBase
         {
             var currentTime = Time.fixedTime;
             float timePass = currentTime - startShowTime;
-            if (timePass < 5.5f)
-                DOVirtual.DelayedCall(5.5f - timePass, (() => ShowCard(s)));
-            else
-                ShowCard(s);
+            ShowCard(s, 6f - timePass);
         }, (exception =>
         {
             Debug.Log(exception.Message);
@@ -44,16 +41,18 @@ public class DrawCardPanel : UIPanelBase
         }));
     }
 
-    private void ShowCard(string s)
+    private void ShowCard(string s, float time)
     {
+        time = Mathf.Max(time, 1);
         var pokemon = JsonUtility.FromJson<PokemonData>(s);
         card.SetData(pokemon);
         var eff = GetCardEffect(Utility.GetCardQuality(pokemon.Rarity));
-        GameObject.Instantiate(eff, card.transform);
+        var control = GameObject.Instantiate(eff, card.transform).GetComponent<CardSpawnEffectControl>();
+        control.duration = time;
         card.SetMaskVisible(false);
         GameManager.Instance.currentPokemon = pokemon;
         GameManager.Instance.AddPokemon(pokemon);
-        DOVirtual.DelayedCall(0.5f, (() => buttonReturn.gameObject.SetActive(true)));
+        DOVirtual.DelayedCall(time, (() => buttonReturn.gameObject.SetActive(true)));
     }
 
     public GameObject GetCardEffect(CardQuality quality)
